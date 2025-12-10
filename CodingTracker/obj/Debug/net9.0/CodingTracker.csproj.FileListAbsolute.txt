@@ -1,0 +1,17 @@
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\CodingTracker.exe
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\CodingTracker.deps.json
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\CodingTracker.runtimeconfig.json
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\CodingTracker.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\CodingTracker.pdb
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\Spectre.Console.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.csproj.AssemblyReference.cache
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.AssemblyInfoInputs.cache
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.AssemblyInfo.cs
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.csproj.CoreCompileInputs.cache
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTr.3232F510.Up2Date
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\refint\CodingTracker.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.pdb
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.genruntimeconfig.cache
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\ref\CodingTracker.dll
