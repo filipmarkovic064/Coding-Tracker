@@ -15,3 +15,4 @@ D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\refint\CodingTracker.dl
 D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.pdb
 D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.genruntimeconfig.cache
 D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\ref\CodingTracker.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.sourcelink.json
