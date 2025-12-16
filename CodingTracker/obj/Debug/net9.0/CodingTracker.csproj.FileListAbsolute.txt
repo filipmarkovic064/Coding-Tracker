@@ -16,3 +16,10 @@ D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.pdb
 D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.genruntimeconfig.cache
 D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\ref\CodingTracker.dll
 D:\Code\C#\Coding_Tracker\CodingTracker\obj\Debug\net9.0\CodingTracker.sourcelink.json
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\CodingTracker.dll.config
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.Messages.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+D:\Code\C#\Coding_Tracker\CodingTracker\bin\Debug\net9.0\Dapper.dll

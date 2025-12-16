@@ -11,8 +11,10 @@ namespace CodingTracker
         internal enum MenuChoice
         {
             StartTime,
+            InsertTime,
             CheckHistory,
-            DeleteHistory
+            DeleteHistory,
+            Exit
         }
     }
 }
