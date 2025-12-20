@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.Data.Sqlite;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,16 +17,16 @@ namespace CodingTracker
 
         internal static void CreateDB()
         {
-            using (var connection = new SqliteConnection(TimeController.ConnectionString)) {
-                var sql = @"CREATE TABLE IF NOT EXISTS CodingSessions(
-                                                      Id        INTEGER PRIMARY KEY AUTOINCREMENT,
-                                                      StartTime STRING,
-                                                      EndTime   STRING,
-                                                      Duration  STRING)";
-                connection.Open();
-                connection.Query(sql);
-                connection.Close();
-            }
+
+            var connection = new SqliteConnection(TimeController.ConnectionString);
+            var sql = @"CREATE TABLE IF NOT EXISTS CodingSessions(
+                                                    Id        INTEGER PRIMARY KEY AUTOINCREMENT,
+                                                    StartTime STRING,
+                                                    EndTime   STRING,
+                                                    Duration  STRING)";
+            connection.Open();
+            connection.Execute(sql);
+            connection.Close();
         }
 
         internal static void ViewHistory()
@@ -34,7 +35,14 @@ namespace CodingTracker
             {
                 var sql = "SELECT * FROM CodingSessions";
                 connection.Open();
-                var History = connection.Query<string>(sql);
+                var History = connection.Query<CodingSession>(sql).ToList();
+                if (History.Any() == false) AnsiConsole.Write(new Markup("The list is empty", UserInterface.MenuStyle));
+                else
+                    foreach (var session in History)
+                        {
+                            // Create a Panel where we will Display Coding Sessions
+                            session.DisplaySession();
+                        }
             }
         }
     
@@ -43,7 +51,7 @@ namespace CodingTracker
 
         }
 
-        internal static void DeleteHistory()
+/*        internal static void DeleteHistory()
         {
 
         }
@@ -51,6 +59,6 @@ namespace CodingTracker
         internal static void StartTime()
         {
 
-        }
+        }*/
     }
 }

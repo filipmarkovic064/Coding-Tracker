@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 
 namespace CodingTracker
 {
@@ -19,11 +20,11 @@ namespace CodingTracker
             EndTime = endTime;
             Duration = null;
         }
-        public void DisplayDuration()
+        public void DisplaySession()
         {
             TimeSpan duration = HelperFunctions.CalculateDuration(StartTime,EndTime);
             string dur = duration.ToString();
-            AnsiConsole.Write(new Markup(dur,UserInterface.MenuStyle));
+            //AnsiConsole.Write(new Markup($"ID={Id} - Coding Session Duration:{Duration} ", UserInterface.MenuStyle))
         }
     }
 }
