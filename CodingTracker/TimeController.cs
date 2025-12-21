@@ -23,7 +23,6 @@ namespace CodingTracker
 
         internal static void CreateDB()
         {
-
             var connection = OpenConnection();
             var sql = @"CREATE TABLE IF NOT EXISTS CodingSessions(
                                                     Id        INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -36,10 +35,61 @@ namespace CodingTracker
 
         internal static void ViewHistory()
         {
+            var choice = AnsiConsole.Prompt(
+                new SelectionPrompt<Enums.SessionViewChoice>()
+                .Title("[bold green]How would you like to see the sessions?[/]")
+                .AddChoices(Enum.GetValues<Enums.SessionViewChoice>())
+                );
+
             var connection = OpenConnection();
             var table = HelperFunctions.CreateTable();
-            var sql = "SELECT * FROM CodingSessions";
-            var History = connection.Query<CodingSession>(sql).ToList();
+            bool Custom = false;
+            List<CodingSession> History = new();
+
+            string sql = "";
+            switch (choice) {
+                case Enums.SessionViewChoice.Normal:
+                    sql = "SELECT * FROM CodingSessions";
+                    break;
+                case Enums.SessionViewChoice.Chronologically:
+                    sql = "SELECT * FROM CodingSessions ORDER BY StartTime ASC";
+                    break;
+                case Enums.SessionViewChoice.ReversedChronologically:
+                    sql = "SELECT * FROM CodingSessions ORDER BY StartTime DESC";
+                    break;
+                case Enums.SessionViewChoice.SortedByDurationAscending:
+                    sql = "SELECT * FROM CodingSessions ORDER BY Duration ASC";
+                    break;
+                case Enums.SessionViewChoice.SortedByDurationDescending:
+                    sql = "SELECT * FROM CodingSessions ORDER BY Duration DESC";
+                    break;
+                case Enums.SessionViewChoice.Custom:
+                    var start= AnsiConsole.Prompt(
+                        new TextPrompt<DateOnly>("From this start date: (yyyy-MM-dd)"));
+                    var end = AnsiConsole.Prompt(
+                        new TextPrompt<DateOnly>("To this start date (yyyy-MM-dd)"));
+                    
+                    //Automatically include the whole day because im too lazy to type the time and i doubt anyone has several code sessions a day
+                    DateTime startT = start.ToDateTime(new TimeOnly(00,00,00));
+                    DateTime endT = end.ToDateTime(new TimeOnly(23,59,59));
+                    string startDate = startT.ToString("yyyy-MM-dd HH:mm:ss");
+                    string endDate = endT.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    
+                    var parameters = new
+                    {
+                        start = startDate,
+                        end = endDate
+                    };
+                    sql = @$"SELECT * FROM CodingSessions 
+                            WHERE StartTime>=@start AND EndTime <=@end
+                            ORDER BY StartTime ASC";
+                    History = connection.Query<CodingSession>(sql,parameters).ToList();
+                    Custom = true;
+                    break;
+            }
+
+            if(!Custom) History = connection.Query<CodingSession>(sql).ToList();
 
             if (History.Any() == false) AnsiConsole.Write(new Markup("[bold red]The list is empty [/]\n"));
             else
@@ -60,6 +110,7 @@ namespace CodingTracker
                 new TextPrompt<DateTime>("When did you start the Coding Session? (yyyy-MM-dd HH:mm:ss)"));
             var end = AnsiConsole.Prompt(
                 new TextPrompt<DateTime>("When did you finish the Coding Session? (yyyy-MM-dd HH:mm:ss)"));
+
             if(DateTime.Compare(start, end) >= 0) 
             {
                 AnsiConsole.Write(new Markup("[bold red]\nError: Start time can't be equal to or later than end time. Returning to Main Menu.[/]"));
@@ -67,16 +118,22 @@ namespace CodingTracker
                 Console.Clear();
                 UserInterface.MainMenu();
             }
-
             string startTime = start.ToString("yyyy-MM-dd HH:mm:ss");
             string endTime = end.ToString("yyyy-MM-dd HH:mm:ss");
-
             CodingSession UserInput = new CodingSession(startTime, endTime);
+            
+            var parameters = new 
+            {
+                ParametrisedStartTime = UserInput.StartTime,
+                ParametrisedEndTime = UserInput.EndTime,
+                ParametrisedDuration = UserInput.Duration
+            };
+
             var connection = OpenConnection();
             var sql = @$"INSERT INTO CodingSessions(StartTime, EndTime, Duration)
-                         VALUES('{UserInput.StartTime}', '{UserInput.EndTime}', '{UserInput.Duration}')";
-            var InsertStatus = connection.Execute(sql);
-            if(InsertStatus > 0) AnsiConsole.Write(new Markup("Session inserted successfully", UserInterface.MenuStyle));
+                         VALUES(@ParametrisedStartTime, @ParametrisedEndTime, @ParametrisedDuration)";
+            var InsertStatus = connection.Execute(sql, parameters);
+            if(InsertStatus > 0) AnsiConsole.Write(new Markup("\n Session inserted successfully\n", UserInterface.MenuStyle));
             connection.Close();
             HelperFunctions.ContinueToMainMenu();
         }
@@ -86,6 +143,7 @@ namespace CodingTracker
             var connection = OpenConnection();
             var sql = "SELECT * FROM CodingSessions";
             var SessionList = connection.Query<CodingSession>(sql).ToList();
+
             var Session = AnsiConsole.Prompt(
                 new SelectionPrompt<CodingSession>()
                 .UseConverter(sessionDisplay=> sessionDisplay.DisplaySession())

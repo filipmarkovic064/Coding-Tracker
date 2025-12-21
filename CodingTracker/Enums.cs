@@ -17,5 +17,14 @@ namespace CodingTracker
             DeleteHistory,
             Exit
         }
+        internal enum SessionViewChoice
+        {
+            Normal,
+            Chronologically,
+            ReversedChronologically,
+            SortedByDurationAscending,
+            SortedByDurationDescending,
+            Custom
+        }
     }
 }
