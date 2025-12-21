@@ -13,6 +13,7 @@ namespace CodingTracker
             StartTime,
             InsertTime,
             CheckHistory,
+            DeleteSession,
             DeleteHistory,
             Exit
         }

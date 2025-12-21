@@ -13,18 +13,21 @@ namespace CodingTracker
         internal int Id{set; get;}
         internal string StartTime { set; get; }
         internal string EndTime { set; get; }
-
-        internal CodingSession(int Id, string startTime, string endTime, string Duration)
+        internal string Duration { set; get; }
+        
+        // Parameterless constructor for Dapper Query
+        public CodingSession() { }
+        internal CodingSession(string startTime, string endTime)
         {
             StartTime = startTime;
             EndTime = endTime;
-            Duration = null;
+            TimeSpan dur = HelperFunctions.CalculateDuration(StartTime, EndTime);
+            Duration = dur.ToString("d'd 'h'h 'm'm'");
         }
-        public void DisplaySession()
+        public string DisplaySession()
         {
-            TimeSpan duration = HelperFunctions.CalculateDuration(StartTime,EndTime);
-            string dur = duration.ToString();
-            //AnsiConsole.Write(new Markup($"ID={Id} - Coding Session Duration:{Duration} ", UserInterface.MenuStyle))
+            string text = $"Coding Session #{Id}: Duration:{Duration}, Started: {StartTime} - Ended: {EndTime}\n";
+            return text; 
         }
     }
 }

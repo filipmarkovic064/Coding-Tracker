@@ -8,14 +8,14 @@ using Spectre.Console.Rendering;
 using static CodingTracker.Enums;
 namespace CodingTracker
 {
-    internal class UserInterface
+    internal static class UserInterface
     {
         public static Style MenuStyle = new Style(
         foreground: Color.Green,
         decoration: Decoration.Bold
         );
 
-        internal void MainMenu()
+        internal static void MainMenu()
         {
             TimeController.CreateDB();
             AnsiConsole.Write(new Align(
@@ -31,25 +31,28 @@ namespace CodingTracker
             switch (choice)
             {
                 case MenuChoice.StartTime:
-                    //Start timer, make a live counter, add to DB
+                    //Start timer, make a live counter, add to DB when stopped if confirmed yes
                     AnsiConsole.Write(new Markup("Start Time", UserInterface.MenuStyle));
                     break;
 
                 case MenuChoice.InsertTime:
-                    AnsiConsole.Write(new Markup("Inserting Time", UserInterface.MenuStyle));
+                    TimeController.InsertTime();
                     break;
 
                 case MenuChoice.CheckHistory:
-                    AnsiConsole.Write(new Markup("Check History", UserInterface.MenuStyle));
-                    //Read all from DB, dapper
+                    TimeController.ViewHistory();
+                    break;
+
+                case MenuChoice.DeleteSession:
+                    TimeController.DeleteSession();
                     break;
 
                 case MenuChoice.DeleteHistory:
-                    AnsiConsole.Write(new Markup("Delete History", UserInterface.MenuStyle));
-                    //Drop table
+                    TimeController.DeleteHistory();
                     break;
 
                 case MenuChoice.Exit:
+                    AnsiConsole.Write(new Markup("Closing the Coding Tracker\n", MenuStyle));
                     Environment.Exit(0);
                     break;
             }
