@@ -22,7 +22,7 @@ namespace CodingTracker
             StartTime = startTime;
             EndTime = endTime;
             TimeSpan dur = HelperFunctions.CalculateDuration(StartTime, EndTime);
-            Duration = dur.ToString("d'd 'h'h 'm'm'");
+            Duration = dur.ToString("d'd 'h'h 'm'm 's's'");
         }
         public string DisplaySession()
         {
