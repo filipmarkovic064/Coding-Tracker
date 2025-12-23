@@ -105,6 +105,7 @@ namespace CodingTracker
             HelperFunctions.ContinueToMainMenu();
         }
     
+
         internal void InsertTime()
         {
             var start = AnsiConsole.Prompt(
@@ -173,6 +174,12 @@ namespace CodingTracker
             var connection = OpenConnection();
             var sql = "SELECT * FROM CodingSessions";
             var SessionList = connection.Query<CodingSession>(sql).ToList();
+
+            if (!SessionList.Any())
+            {
+                AnsiConsole.Write(new Markup("List is currently empty, returning to Main Menu", UserInterface.MenuStyle));
+                HelperFunctions.ContinueToMainMenu();
+            }
 
             var Session = AnsiConsole.Prompt(
                 new SelectionPrompt<CodingSession>()

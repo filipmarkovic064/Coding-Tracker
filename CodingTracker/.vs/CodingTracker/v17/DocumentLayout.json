@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\helperfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:helperfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|d:\\code\\c#\\coding_tracker\\codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D2B24DF-851B-27BC-FF1A-3FD17D384146}|CodingTracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,50 +30,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\Enums.cs",
+              "RelativeDocumentMoniker": "Enums.cs",
+              "ToolTip": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\Enums.cs",
+              "RelativeToolTip": "Enums.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T16:45:25.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HelperFunctions.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\HelperFunctions.cs",
               "RelativeDocumentMoniker": "HelperFunctions.cs",
               "ToolTip": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\HelperFunctions.cs",
               "RelativeToolTip": "HelperFunctions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T19:51:36.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TimeController.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\TimeController.cs",
               "RelativeDocumentMoniker": "TimeController.cs",
               "ToolTip": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\TimeController.cs",
               "RelativeToolTip": "TimeController.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAcwOAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAAApwLYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T20:23:04.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserInterface.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\UserInterface.cs",
               "RelativeDocumentMoniker": "UserInterface.cs",
               "ToolTip": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\UserInterface.cs",
               "RelativeToolTip": "UserInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T17:32:29.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T17:32:29.861Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Coding_Tracker\\CodingTracker\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -77,8 +92,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T18:18:35.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-10T18:18:35.767Z"
             }
           ]
         }
