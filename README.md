@@ -1,4 +1,4 @@
-#Coding Tracker
+# Coding Tracker
 <h4>Thought process: </h4>
 
 1. I started by creating a class for the things i know i will need (CodingSession class, TimeController, UserInterface)
