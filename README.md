@@ -1,5 +1,6 @@
 #Coding Tracker
 <h4>Thought process: </h4>
+
 1. I started by creating a class for the things i know i will need (CodingSession class, TimeController, UserInterface)
 2. I havent used Spectre Console before and it seemed interesting so i just played around creating different stuff in order to get a feel for it, i make an interface that i was satisfied with and remembered that enums were mentioned several times in the OOP course, so i went ahead and created Enums.cs where all my menu options were. From what i understood they are stricter/safer versions of lists where i dont want it being modified or flexible, i want it to be just the way it is. 
 3. Dapper, i didnt get what the whole point of this is at first, but once i started using it i realised how nice having it do the connection part for me is. I went ahead and coded the different methods i needed for my menu
@@ -8,6 +9,7 @@
 6. Not sure if i should create a seeding function just like i did in the previous project, as it wasnt mentioned anywhere in the project description
 
 <h4>While creating this project i have learned: </h4>
+
 1. Spectre Console 
     Spectre is my favorite thing ever, learning how to use it has been so rewarding, i went back to my previous project and the difference it makes is huge! Not only does it look much better and save time (by not having to hard-code everything) but its also amazing for user input verification
 2. Dapper - really nice, makes the code feel smoother, where i no longer have to deal with all that connection stuff that looks ugly and takes space. Much easier to use SQL with it as well
